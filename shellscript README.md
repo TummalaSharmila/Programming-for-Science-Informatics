@@ -13,14 +13,14 @@ I am submitting a shell script that allows to procure all secondary assemblies f
 
 The commands used in this file and their purpose
 
-* *cd \~* : navigate to home directory
+* *cd \~* : navigate to home directory.
 
-* *mkdir Informatics_573* :  used to create directory
+* *mkdir Informatics_573* :  used to create directory.
 
-* *cd Informatics_573* : used to navigate to the specified directory
+* *cd Informatics_573* : used to navigate to the specified directory.
   
 * *wget* is used to download files from a browser
-we can download each file separately with this command or use optional flags and wildcards to download mutliple files at a time as shown in this script
+we can download each file separately with this command or use optional flags and wildcards to download mutliple files at a time as shown in this script.
   
 *wget -r -np -nd -A 'chr1_\*' https://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/*
   in this script 3 optional flags \(-r, -nd, -A\) are used to customize downloading 
@@ -28,20 +28,20 @@ we can download each file separately with this command or use optional flags and
   "No directory" is represented by the option -nd, which instructs wget not to build a directory structure when downloading files. 
   The kinds of files that will be downloaded are specified by -A option. "Accept" is represented by A.
 
-* *gunzip chr1_\** command is used to unzip the downloaded files
+* *gunzip chr1_\** command is used to unzip the downloaded files.
   
-* *touch data_summary.txt* is used to create an empty text file
+* *touch data_summary.txt* is used to create an empty text file.
   
-* *ls -l >> data_summary.txt* ls -l gives information \(size, name, permissions etc\) of all the files in the directory and  \'>>' is used to append the result of this command to data_summary.txt file
+* *ls -l >> data_summary.txt* ls -l gives information \(size, name, permissions etc\) of all the files in the directory and  \'>>' is used to append the result of this command to data_summary.txt file.
   
-*  *head >> data_summary.txt* is used to append first 10 lines of the files into summary text file
+*  *head >> data_summary.txt* is used to append first 10 lines of the files into summary text file.
   
-*  *wc -l >> data_summary.txt* is used to append number of lines and name of each file present in the directory
+*  *wc -l >> data_summary.txt* is used to append number of lines and name of each file present in the directory.
   
-*  *cat >> data_summary.txt* is used to display all the information present in the data_summary.txt file
+*  *cat >> data_summary.txt* is used to display all the information present in the data_summary.txt file.
 
 ### Files needed:
-no need of any other files
+no need of any other files.
 
 ### Packages needed: 
 make sure you have wget installed prior to running my script.
@@ -51,8 +51,9 @@ make sure you have wget installed prior to running my script.
 2. open the terimnal and navigate to the directory which contains this script
 3. make this file executable with command \" chmod +x shatumma.sh \"
 4. enter \"./shatumma.sh\" to run the script.
-5. 
 
+###NOTE:
+The script will download 21 chromosome sequence files and creates a data summary text file with first 10 lines, size, name,permissions, no.of lines of each downloaded file. 
 
 
 
