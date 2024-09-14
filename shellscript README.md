@@ -1,12 +1,15 @@
-### **COURSE NAME AND CODE:** Programming for Science Informatics - B573
+## **COURSE NAME AND CODE:** Programming for Science Informatics - B573
 
 ### **Programmer:** Sharmila Tummala
 
-### **Script Language:** Unix, Bash shell
+### **Script Language:** 
+Unix, Bash shell
 
-### **Bash version:** GNU bash, version 3.2.57(1) - release \(arm64-apple-darwin23\)
+### **Bash version:** 
+GNU bash, version 3.2.57(1) - release \(arm64-apple-darwin23\)
 
-###**Description:** I am submitting a shell script that allows to procure all secondary assemblies for human chromosome 1 from University of California, Santa Cruz (UCSC) Genome browser \(all chromosome 1 assemblies except “chr1.fa.gz”\) at (https://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/) and creates a data summary file which includes name of the assembly file, size, permissions, number of lines in the assembly file, first 10 lines in the file from all the chromosome 1 downloaded files. The purpose of the script is to access the chromosome sequence files and download them from UCSC genome browser, extract the required information and append it into a file. 
+### **Description:** 
+I am submitting a shell script that allows to procure all secondary assemblies for human chromosome 1 from University of California, Santa Cruz (UCSC) Genome browser \(all chromosome 1 assemblies except “chr1.fa.gz”\) at (https://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/) and creates a data summary file which includes name of the assembly file, size, permissions, number of lines in the assembly file, first 10 lines in the file from all the chromosome 1 downloaded files. The purpose of the script is to access the chromosome sequence files and download them from UCSC genome browser, extract the required information and append it into a file. 
 
 The commands used in this file and their purpose
 
