@@ -52,7 +52,7 @@ make sure you have wget installed prior to running my script.
 3. make this file executable with command \" chmod +x shatumma.sh \"
 4. enter \"./shatumma.sh\" to run the script.
 
-###NOTE:
+### NOTE:
 The script will download 21 chromosome sequence files and creates a data summary text file with first 10 lines, size, name,permissions, no.of lines of each downloaded file. 
 
 
