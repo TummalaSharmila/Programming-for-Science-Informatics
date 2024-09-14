@@ -13,14 +13,14 @@ I am submitting a shell script that allows procuring all secondary assemblies fo
 
 The commands used in this file and their purpose
 
-* *cd \~* : navigate to home directory.
+* *cd \~*: navigate to the home directory.
 
-* *mkdir Informatics_573* :  used to create directory.
+* *mkdir Informatics_573*:  used to create directory named Informatics_573.
 
-* *cd Informatics_573* : used to navigate to the specified directory.
+* *cd Informatics_573*: used to navigate to the specified directory.
   
 * *wget* is used to download files from a browser
-we can download each file separately with this command or use optional flags and wildcards to download mutliple files at a time as shown in this script.
+we can download each file separately with this command or use optional flags and wildcards to download multiple files at a time as shown in this script.
   
 *wget -r -np -nd -A 'chr1_\*' https://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/*
   in this script 3 optional flags \(-r, -nd, -A\) are used to customize downloading 
@@ -32,24 +32,24 @@ we can download each file separately with this command or use optional flags and
   
 * *touch data_summary.txt* is used to create an empty text file.
   
-* *ls -l >> data_summary.txt* ls -l gives information \(size, name, permissions etc\) of all the files in the directory and  \'>>' is used to append the result of this command to data_summary.txt file.
+* *ls -l >> data_summary.txt* ls -l gives information \(size, name, permissions, etc\) of all the files in the directory and  \'>>' is used to append the result of this command to the data_summary.txt file.
   
-*  *head >> data_summary.txt* is used to append first 10 lines of the files into summary text file.
+*  *head >> data_summary.txt* is used to append the first 10 lines of the files into the summary text file.
   
 *  *wc -l >> data_summary.txt* is used to append number of lines and name of each file present in the directory.
   
 *  *cat >> data_summary.txt* is used to display all the information present in the data_summary.txt file.
 
 ### Files needed:
-no need of any other files.
+
 
 ### Packages needed: 
 make sure you have wget installed prior to running my script.
 
 ### How to run my script
 1. download the shatumma.sh script to your local system
-2. open the terimnal and navigate to the directory which contains this script
-3. make this file executable with command \" chmod +x shatumma.sh \"
+2. open the terminal and navigate to the directory which contains this script
+3. make sure this file is executable with command \" chmod +x shatumma.sh\"
 4. enter \"./shatumma.sh\" to run the script.
 
 ### NOTE:
