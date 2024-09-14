@@ -9,7 +9,7 @@ Unix, Bash shell
 GNU bash, version 3.2.57(1) - release \(arm64-apple-darwin23\)
 
 ### **Description:** 
-I am submitting a shell script that allows procuring all secondary assemblies for human chromosome 1 from the University of California, Santa Cruz \(UCSC\) Genome Browser \(all chromosome 1 assemblies except “chr1.fa.gz”) at (https://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/\) and creates a data summary file which includes the name of the assembly file, size, permissions, number of lines in the assembly file, first 10 lines in the file from all the chromosome 1 downloaded files. The script aims to access and download the chromosome sequence files from the UCSC genome browser, extract the required information, and append it into a file.
+I am submitting a shell script that allows procuring all secondary assemblies for human chromosome 1 from the University of California, Santa Cruz \(UCSC\) Genome Browser \(all chromosome 1 assemblies except “chr1.fa.gz”) at (https://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/) and creates a data summary file which includes the name of the assembly file, size, permissions, number of lines in the assembly file, first 10 lines in the file from all the chromosome 1 downloaded files. The script aims to access and download the chromosome sequence files from the UCSC genome browser, extract the required information, and append it into a file.
 
 The commands used in this file and their purpose
 
