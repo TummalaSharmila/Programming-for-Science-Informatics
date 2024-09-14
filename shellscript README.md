@@ -44,6 +44,15 @@ we can download each file separately with this command or use optional flags and
 no need of any other files
 
 ### Packages needed: 
+make sure you have wget installed prior to running my script.
+
+### How to run my script
+1. download the shatumma.sh script to your local system
+2. open the terimnal and navigate to the directory which contains this script
+3. make this file executable with command \" chmod +x shatumma.sh \"
+4. enter \"./shatumma.sh\" to run the script.
+5. 
+
 
 
 
