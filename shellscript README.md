@@ -10,7 +10,7 @@
 
 The commands used in this file and their purpose
 
-* *cd ~ * : navigate to home directory
+* *cd ~* : navigate to home directory
 
 * *mkdir Informatics_573* :  used to create directory
 
@@ -19,7 +19,7 @@ The commands used in this file and their purpose
 * *wget* is used to download files from a browser
 we can download each file separately with this command or use optional flags and wildcards to download mutliple files at a time as shown in this script
   
-*wget -r -np -nd -A 'chr1_*' https://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/ *
+*wget -r -np -nd -A 'chr1_\*' https://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/*
   in this script 3 optional flags \(-r, -nd, -A\) are used to customize downloading 
   The "recursive" option (-r) instructs wget to download all files recursively. 
   "No directory" is represented by the option -nd, which instructs wget not to build a directory structure when downloading files. 
