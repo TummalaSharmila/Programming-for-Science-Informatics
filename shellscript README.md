@@ -10,7 +10,7 @@
 
 The commands used in this file and their purpose
 
-* *cd ~* : navigate to home directory
+* *cd \~* : navigate to home directory
 
 * *mkdir Informatics_573* :  used to create directory
 
