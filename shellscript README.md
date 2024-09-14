@@ -27,10 +27,16 @@ The "recursive" option (-r) instructs wget to download all files recursively.
 The kinds of files that will be downloaded are specified by -A option. "Accept" is represented by A.
 
 * *gunzip chr1_\** command is used to unzip the downloaded files
+  
 * *touch data_summary.txt* is used to create an empty text file
-* *ls -l >> data_summary.txt* ls -l gives information (size, name, permissions etc) of all the files in the directory and  \'>>' is used to append the result of this command to data_summary.txt file
+  
+* *ls -l >> data_summary.txt* ls -l gives information \(size, name, permissions etc\) of all the files in the directory and  \'>>' is used to append the result of this command to data_summary.txt file
+  
 *  *head >> data_summary.txt* is used to append first 10 lines of the files into summary text file
+  
 *  *wc -l >> data_summary.txt* is used to append number of lines and name of each file present in the directory
+  
 *  *cat >> data_summary.txt* is used to display all the information present in the data_summary.txt file
+
 
 
