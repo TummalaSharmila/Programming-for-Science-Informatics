@@ -43,7 +43,7 @@ we can download each file separately with this command or use optional flags and
 *  *cat >> data_summary.txt* is used to display all the information present in the data_summary.txt file.
 
 ### Files needed:
-
+you need bash shell to run this script
 
 ### Packages needed: 
 make sure you have wget installed prior to running my script.
