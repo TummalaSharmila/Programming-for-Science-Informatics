@@ -1,4 +1,4 @@
-###**COURSE NAME AND CODE:** Programming for Science Informatics - B573
+###**COURSE NAME AND CODE:** ###Programming for Science Informatics - B573
 
 ###**Programmer:** Sharmila Tummala
 
