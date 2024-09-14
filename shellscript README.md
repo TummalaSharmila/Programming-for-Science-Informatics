@@ -20,11 +20,10 @@ The commands used in this file and their purpose
 we can download each file separately with this command or use optional flags and wildcards to download mutliple files at a time as shown in this script
   
 *wget -r -np -nd -A 'chr1_*' https://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/*
-  
-in this script 3 optional flags \(-r, -nd, -A\) are used to customize downloading
-The "recursive" option (-r) instructs wget to download all files recursively.
-"No directory" is represented by the option -nd, which instructs wget not to build a directory structure when downloading files. 
-The kinds of files that will be downloaded are specified by -A option. "Accept" is represented by A.
+  in this script 3 optional flags \(-r, -nd, -A\) are used to customize downloading 
+  The "recursive" option (-r) instructs wget to download all files recursively. 
+  "No directory" is represented by the option -nd, which instructs wget not to build a directory structure when downloading files. 
+  The kinds of files that will be downloaded are specified by -A option. "Accept" is represented by A.
 
 * *gunzip chr1_\** command is used to unzip the downloaded files
   
