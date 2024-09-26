@@ -28,6 +28,8 @@ print("letters between 500th letter to 800th letter of reverse complementary DNA
 
 
 ####question 3
+#converting all the lowercase letters to uppercase
+seq= seq.upper()
 def count_bases(seq):
     # creating an empty dictionary
     my_dict = {}
