@@ -24,7 +24,7 @@ for base in seq [::-1]:
 #to print 79th letter of the sequence
 print ("79th letter of reverse complementary DNA sequence:", revseq[78])
 #to print the 500th through the 800th letters of this sequence.
-print("letters from 500th letter to 800th letter of reverse complementary DNA sequence:", revseq[499:799])
+print("letters from 500th letter to 800th letter of reverse complementary DNA sequence:", revseq[499:800])
 
 
 ####question 3
