@@ -30,9 +30,9 @@ if you are using VScode
 1. make sure the python extension is installed
 2. download this file and open it using VScode and run the program by clicking on the run button present on the top right corner
 
-   ###NOTE
-   Python has various IDEs, running this python file completely depends on the IDE you are using.
-   keep python file and the DNA seqence file in the same folder. 
+### NOTE
+Python has various IDEs, running this python file completely depends on the IDE you are using.
+keep python file and the DNA seqence file in the same folder. 
 
 
 
