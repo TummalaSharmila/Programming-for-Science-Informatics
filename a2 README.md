@@ -32,7 +32,7 @@ if you are using VScode
 
    ###NOTE
    Python has various IDEs, running this python file completely depends on the IDE you are using.
-   keep python file and ther DNA seqence file in the same folder. 
+   keep python file and the DNA seqence file in the same folder. 
 
 
 
