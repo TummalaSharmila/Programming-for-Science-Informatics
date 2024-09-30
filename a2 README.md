@@ -33,7 +33,7 @@ if you are using VScode
 ### NOTE
 1. Python has various IDEs, running this python file completely depends on the IDE you are using.
 2. Keep python file and the DNA seqence file in the same folder.
-3. If you can't access the file please give file path in the place of file name in the first line of the code like this.  
+3. If you can't access the file please give file path where the downloaded sequence file is located in your system in the place of file name in the first line of the code like this.  
 **with open('/content/drive/MyDrive/Colab Notebooks/chr1_GL383518v1_alt.fa', 'r')as file:**
 
 
