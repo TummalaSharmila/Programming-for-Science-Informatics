@@ -81,19 +81,21 @@ print(expression['Chromosome'].value_counts())
 #2b. histogram showing the distribution of the number of differentially expressed genes (DEGs) by chromosome
 # Plot the histogram
 DEG_vs_chromosome = expression.groupby('Chromosome').size()
-DEG_vs_chromosome.plot(kind='bar', figsize=(10,6))
+colors = ['#FF9999', '#66B3FF', '#99FF99', '#FFCC99', '#FFD700']
+DEG_vs_chromosome.plot(kind='bar', figsize=(10,6),color= colors)
 plt.title('No.of DEG by Chromosome')
 plt.xlabel('CHROMOSOME')
 plt.ylabel('FREQUENCY')
-plt.xticks(rotation=45)
+plt.xticks(rotation=90)
 plt.show()
+
 
 #2c. histogram showing the distribution of DEGs by chromosome segregated by sample type (Normal or Tumor)
 normal = expression[expression['Higher_Expression'] == 'Normal']
 tumor = expression[expression['Higher_Expression'] == 'Tumor']
 plt.figure(figsize=(12, 6))
-plt.hist(tumor['Chromosome'].astype(str), color='red', label='Tumor', bins=20, alpha=0.7)
-plt.hist(normal['Chromosome'].astype(str), color='green', label='Normal', bins=20, alpha=0.5)
+plt.hist(tumor['Chromosome'].astype(str), color='black', label='Tumor', bins=20, alpha=0.7)
+plt.hist(normal['Chromosome'].astype(str), color='pink', label='Normal', bins=20, alpha=0.5)
 plt.title('Distribution of DEGs by Chromosome segregated by sample type (Normal or Tumor)')
 plt.xlabel('CHROMOSOME')
 plt.ylabel('FREQUENCY')
@@ -104,7 +106,7 @@ plt.show()
 #2d. bar chart showing the percentages of the DEGs that are upregulated (higher) in Tumor samples and down regulated (lower) in Tumor samples
 upregulated_percentage = (expression[expression['Higher_Expression'] == 'Tumor'].shape[0] / expression.shape[0]) * 100
 downregulated_percentage = 100 - upregulated_percentage
-plt.bar(['Upregulated', 'Downregulated'], [upregulated_percentage, downregulated_percentage], color=['grey', 'yellow'])
+plt.bar(['Upregulated', 'Downregulated'], [upregulated_percentage, downregulated_percentage], color=['blue', 'red'])
 plt.xlabel('Gene Expression')
 plt.ylabel('Percentage')
 plt.title('Percentage of DEGs Upregulated and Downregulated in Tumor Samples')
@@ -113,14 +115,18 @@ plt.show()
 #2e. Using the raw data from part 1b to create a heatmap visualizing gene expression by sample
 import seaborn as sns
 plt.figure(figsize=(12, 8))
-sns.heatmap(gene_expression_data.set_index('Probe_ID'), cmap='turbo')  # Create heatmap
+sns.heatmap(gene_expression_data.set_index('Probe_ID'), cmap='plasma')  # Create heatmap
 plt.title('Heatmap of Gene Expression by Sample')
 #plt.savefig('gene_expression_heatmap.png')
 plt.show()
 
 #2f. Using the same data from the previous part to create a clustermap visualizing gene expression by sample
 gene_expression_data_cluster = gene_expression_data.drop("Probe_ID", axis=1)
-sns.clustermap(gene_expression_data_cluster, cmap="magma", figsize=(10, 8))
+sns.clustermap(gene_expression_data_cluster, cmap="turbo", figsize=(10, 8))
 plt.tight_layout()
 plt.show()
 
+#2g.Write a few sentence explaining the findings of your analysis, feel free to reference any of visualizations
+'''The chromosomal distribution patterns are better understood by the histograms that display the distribution of differentially expressed genes by chromosome—both tumor and normal—and by sample type. Greater frequencies of differently expressed genes were found on several chromosomes, suggesting potential genetic regions connected to the symptoms reported. A considerable frequency of upregulated genes was shown in the bar chart representing the percentages of upregulated and downregulated genes in tumor samples, suggesting a potential gene regulatory mechanism influencing the tumor phenotype.
+Furthermore, it was feasible to discover clusters of co-expressed genes and samples thanks to the heatmap and clustermap visualizations, which offered clear views of gene expression patterns across samples.
+'''
