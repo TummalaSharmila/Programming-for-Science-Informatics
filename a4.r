@@ -1,8 +1,8 @@
 #### Question 1
 # Opening the sequence file in read mode and reading the content
-file_conn <- file("/Users/sharmilatummala/Documents/Programming/chr1_GL383518v1_alt.fa", "r")
-seq <- readLines(file_conn)[-1]  # Remove the first line (sequence name)
-close(file_conn)
+datafile <- file("/Users/sharmilatummala/Documents/Programming/chr1_GL383518v1_alt.fa", "r")
+seq <- readLines(datafile)[-1]  # Remove the first line (sequence name)
+close(datafile)
 seq <- paste(seq, collapse = "")  # Remove newline characters
 
 # Print the 10th letter of this sequence
@@ -40,7 +40,7 @@ count_bases <- function(seq) {
   
   # Loop through each kilobase of the sequence
   for (i in seq(1, nchar(seq), by = 1000)) {
-    kilobase <- (i - 1) /1000
+    kilobase <- i-1 
     subseq <- substr(seq, i, min(i + 999, nchar(seq)))  # Extract the current 1000 base pair segment
     
     # Count occurrences of each base (A, C, G, T) in the current segment
@@ -88,10 +88,11 @@ x <- sapply(base_count_list, function(base_count) sum(unlist(base_count)))
 
 #### Question 4e
 # Explanation of the expected sum
-cat("The expected answer is 1000 as the sum for each list, as this is the total number of nucleotides for every 1000 nucleotides, except for the last list, which has fewer nucleotides if the total length is not divisible by 1000.\n")
+cat("The expected answer is 1000 as the sum for each list, as this is the total number of nucleotides for every 1000 nucleotides, except for the last list, which has fewer nucleotides as the total length is not divisible by 1000.\n")
 
 # To verify, run the following lines (uncomment if needed)
-#cat("Total length of sequence:", nchar(seq), "\n")
-#print(x)
+cat("Total length of sequence:", nchar(seq), "\n")
+print(x)
+
 
 
