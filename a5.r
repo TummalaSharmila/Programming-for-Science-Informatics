@@ -1,13 +1,16 @@
+install.packages("readxl")
+install.packages("dplyr")
+install.packages("tidyr")
+
 # 1a
 # Loading the libraries
 library(readxl) # to read the excel file
 library(dplyr) # to manipulate data
 library(tidyr) # for reshaping the data
-library(pheatmap)
 
 # Loading all the three files 
 gene_expression_data <- read_excel("/Users/sharmilatummala/Documents/Programming/data files/Gene_Expression_Data (1).xlsx")
-gene_information <- read.csv("/Users/sharmilatummala/Documents/Programming/data files/Gene_Information (1).csv")
+gene_information <- read.csv("/Users/sharmilatummala/Documents/Programming/data files/gene_information (1).csv")
 sample_information <- read.table("/Users/sharmilatummala/Documents/Programming/data files/Sample_Information (1).tsv")
 
 #1b Changing the sample names from the “Gene_Expression_Data.xlsx”, based upon the phenotype presented in “Sample_Information.tsv”
@@ -63,7 +66,7 @@ newdf <- data.frame(Probe_ID = gene_expression_data$Probe_ID, fold_change = fold
 # Categorize genes as having higher expression in tumor or normal based on fold change
 newdf$Higher_Expression <- ifelse(newdf$fold_change > 0, "Tumor", "Normal")
 # Merge with gene info to add chromosome information
-newdf <- merge(newdf, gene_info[, c("Probe_ID", "Chromosome")], by = "Probe_ID", all.x = TRUE)
+newdf <- merge(newdf, gene_information[, c("Probe_ID", "Chromosome")], by = "Probe_ID", all.x = TRUE)
 # Print the filtered data
 print(Foldchangedf)
 # Print the fold change gene data with chromosome information
@@ -118,7 +121,8 @@ ggplot(deg_counts, aes(x = Expression, y = Count, fill = Expression)) +
   scale_fill_manual(values = c("Upregulated" = "green", "Downregulated" = "red"))
 
 #2e
-
+install.packages("pheatmap")
+library(pheatmap)
 
 # Subset gene expression data (without Probe_ID column)
 gene_expression_matrix <- as.matrix(gene_expression_data[,-1])
@@ -149,6 +153,7 @@ pheatmap(gene_expression_matrix,
 #2g.Write a few sentence explaining the findings of your analysis, feel free to reference any of visualizations
 #The chromosomal distribution patterns are better understood by the histograms that display the distribution of differentially expressed genes by chromosome—both tumor and normal—and by sample type. Greater frequencies of differently expressed genes were found on several chromosomes, suggesting potential genetic regions connected to the symptoms reported. A considerable frequency of upregulated genes was shown in the bar chart representing the percentages of upregulated and downregulated genes in tumor samples, suggesting a potential gene regulatory mechanism influencing the tumor phenotype.
 #Furthermore, it was feasible to discover clusters of co-expressed genes and samples thanks to the heatmap and clustermap visualizations, which offered clear views of gene expression patterns across samples.
+
 
 
 
