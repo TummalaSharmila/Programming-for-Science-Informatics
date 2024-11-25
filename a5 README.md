@@ -18,7 +18,7 @@ you need R installed and Gene_Expression_Data.xlsx, Gene_Information.csv, Sample
 
 
 ### Packages needed: 
-This is a basic R program it works without any special packages.
+Install pheatmap, readxl, dplyr, tidyr packages.
 
 ### How to run my program
 1. download the a5.r file and data files to your local system
